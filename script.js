@@ -10,9 +10,6 @@ const quantityInput = document.querySelector(".quantity-input");
 const sizeOptions = document.querySelectorAll(".size-option");
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
 const navbarMenu = document.getElementById("navbarMenu");
-const searchBtn = document.getElementById("searchBtn");
-const searchClose = document.getElementById("searchClose");
-const searchBar = document.getElementById("searchBar");
 
 sizeGuideBtn.addEventListener("click", () => {
   sizeGuideModal.style.display = "block";
@@ -63,17 +60,6 @@ mobileMenuToggle.addEventListener("click", () => {
   mobileMenuToggle.innerHTML = navbarMenu.classList.contains("active")
     ? '<i class="fas fa-times"></i>'
     : '<i class="fas fa-bars"></i>';
-});
-
-searchBtn.addEventListener("click", () => {
-  searchBar.style.display = "block";
-  setTimeout(() => {
-    document.querySelector(".search-input").focus();
-  }, 100);
-});
-
-searchClose.addEventListener("click", () => {
-  searchBar.style.display = "none";
 });
 
 document.querySelectorAll(".nav-link").forEach((link) => {
